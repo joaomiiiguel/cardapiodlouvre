@@ -1,0 +1,72 @@
+html {
+    width: 100%;
+    margin-right: 0;
+    padding-right: 0;
+    background-color: #201A1A;
+    
+}
+body{
+    background-color: #201A1A;
+}
+header{
+    background-color: #2D2525;
+    height: 95px;
+    width: 100%;
+    color: #906A1B;
+    position: fixed;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+header .row{
+    margin: auto;
+}
+#btHome{
+    font-size:50px;
+    float: left;
+    padding-top: 20px;
+    padding-left: 8%;
+    margin: auto;
+    text-decoration: none; 
+    color: #906A1B
+}
+.categoriaprato{
+    font-size: 40px;
+    text-align: center;
+    margin: auto;
+    padding-top: 26px;
+}
+
+.container{
+    padding-top: 120px;
+    background-color: #201A1A;
+    
+}
+
+.container .lista{
+    margin: auto;
+    padding-left: 10%;
+    
+}
+.container .lista .row .column .polaroid {
+    width: 98%;
+    background-color: #2D2525;
+    margin-bottom: 25px;
+    margin-left: 7px;
+    margin-right: 7px;
+    color: white;
+}
+
+.container .lista .row .column .polaroid .container {
+    font-size: 25px;
+    padding: 8px 20px;
+    width: 100%;
+    height: 50px;
+    line-height:center;
+    text-align: center;
+    background-color: #2D2525;
+    
+}
+
+.column {
+    float: left;
+    width: 30%;
+}

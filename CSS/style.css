@@ -1,0 +1,66 @@
+  /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+body, html {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: black;
+    margin: 0;
+    border: 0;
+    
+    
+}
+
+.row{
+    padding-left: 100px;
+    padding-right: 0;
+    margin: 0;
+    background-color: #2D2525;
+}
+    
+    /* Set gray background color and 100% height */
+.sidenav {
+    background-color: #201A1A;
+    color: #966A1B;
+    height: 500px;
+    border: 3px solid #966A1B;
+    border-radius: 8px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+#cardp {
+    width: 60px;
+    height: 50px;
+}
+
+a:link, a:visited {
+    background-color: #2D2525;
+    color: white;
+    padding: 14px 25px;
+    margin-bottom: 5px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: white;
+}
+
+#maincontent{
+    padding-right: 0px;
+    margin-right: 0px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.FundoHome{
+    height: 100%;
+    float: right;
+    border: 0;
+    display: block;
+}
