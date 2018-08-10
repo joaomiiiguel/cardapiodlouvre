@@ -1,0 +1,40 @@
+  /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+body, html {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    border: 0;
+    background-color: #2D2525;
+    
+}
+.logo{
+    width: 12em;
+}
+.titulo{
+    color: white;
+    font-weight: bold;
+    letter-spacing: 18px;
+    font-size: 25px;
+}
+.container{
+    height: 100hv;
+    margin: auto;
+    padding: 4em;
+
+}
+.row{
+    width: 90%;
+    margin: auto;
+    
+}
+
+.row_cell{
+    float: left;
+    margin: 1em 1em;
+    display: inline;
+    width: 30%;    
+}
+.plano{
+    width: 16em;
+}

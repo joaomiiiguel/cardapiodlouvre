@@ -16,23 +16,30 @@ header{
     position: fixed;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-header .row{
+header{
     margin: auto;
+}
+.row{
+    margin: auto;
+}
+.row_cell{
+    text-align: center;  
+    margin: 0 8em;
 }
 #btHome{
     font-size:50px;
-    float: left;
-    padding-top: 20px;
-    padding-left: 8%;
-    margin: auto;
+    padding-top: 0.5em;
     text-decoration: none; 
-    color: #906A1B
+    color: #906A1B;
+    float: left;
 }
 .categoriaprato{
     font-size: 40px;
     text-align: center;
-    margin: auto;
-    padding-top: 26px;
+    padding: 0em;
+    float: left;
+    width: 90%;
+    font-weight: bold;
 }
 
 .container{
@@ -69,4 +76,7 @@ header .row{
 .column {
     float: left;
     width: 30%;
+}
+p{
+    font-size: 15px;
 }
