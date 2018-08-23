@@ -2,10 +2,11 @@
  "name": "Cardápio D'Louvre",
  "short_name": "Card DLouvre",
  "lang": "pt-BR",
- "start_url": "/",
-"background_color": "#201A1A",
-"theme_color": "#000000",
-"display": "standalone",
+ "start_url": "/?utm_source=homescreen",
+ "background_color": "#212121",
+ "theme_color": "#000000",
+ "display": "standalone",
+ "orientation": "landscape",
  "icons": [
   {
    "src": "android-icon-36x36.png",

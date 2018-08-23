@@ -10,31 +10,23 @@ body, html {
 }
 .logo{
     width: 12em;
-}
-.titulo{
-    color: white;
-    font-weight: bold;
-    letter-spacing: 18px;
-    font-size: 25px;
+    margin: auto;
 }
 .container{
-    height: 100hv;
+    height: 100%;
     margin: auto;
-    padding: 4em;
+    padding: 3em 0em;
 
 }
 .row{
-    width: 90%;
     margin: auto;
     
 }
 
 .row_cell{
     float: left;
-    margin: 1em 1em;
-    display: inline;
-    width: 30%;    
+    margin: 20px 25px;
 }
 .plano{
-    width: 16em;
+    width: 200px;
 }
