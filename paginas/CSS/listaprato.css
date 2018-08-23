@@ -18,6 +18,7 @@ header{
 }
 header{
     margin: auto;
+    padding: 0 100px;
 }
 .row{
     margin: auto;
@@ -63,11 +64,9 @@ header{
 }
 
 .container .lista .row .column .polaroid .container {
-    font-size: 25px;
     padding: 8px 20px;
     width: 100%;
-    height: 50px;
-    line-height:center;
+    height: 53px;
     text-align: center;
     background-color: #2D2525;
     
@@ -78,5 +77,5 @@ header{
     width: 30%;
 }
 p{
-    font-size: 15px;
+    font-size: 16px;
 }
