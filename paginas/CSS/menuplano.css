@@ -8,6 +8,10 @@ body, html {
     
     
 }
+.container-fluid{
+    margin: 0;
+    padding: 0;
+}
 
 .row{
     padding-left: 100px;
@@ -19,12 +23,12 @@ body, html {
 .sidenav {
     background-color: #201A1A;
     color: #966A1B;
-    height: 500px;
+    height: 480px;
     border: 3px solid #966A1B;
     border-radius: 8px;
-    padding-top: 2em;
+    padding-top: 1em;
     padding-bottom: 2em;
-    margin-top: 10%;
+    margin-top: 3%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     max-width: 30em;
     

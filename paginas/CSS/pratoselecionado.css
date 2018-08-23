@@ -3,7 +3,7 @@ html {
     margin-right: 0;
     padding-right: 0;
     background-color: #201A1A;
-    font-size: 35px;
+    font-size: 20px;
     
 }
 body{
@@ -12,58 +12,52 @@ body{
 }
 header{
     background-color: #2D2525;
-    height: 95px;
+    height: 80px;
     width: 100%;
     color: #906A1B;
     position: fixed;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-header{
     margin: auto;
 }
 .row{
     margin: 0 8em;
+    height: 80px;
 }
-.row_cell{
-    text-align: center;  
-}
+
 #btBack{
-    font-size:50px;
-    padding-top: 0.5em;
+    font-size:45px;
+    padding-top: 0.3em;
     text-decoration: none; 
     color: #906A1B;
     float: left;
 }
 #btHome{
-    font-size:50px;
+    font-size:45px;
     margin: auto;
     text-decoration: none; 
     color: #906A1B;
-    padding-top: 0.5em;
+    padding-top: 0.3em;
     float: right;
 }
 .nomeprato{
     text-align: center;
     padding: 2px;
     float: left;
-    width: 90%;
+    width: 85%;
     height: auto;
     
 }
 
 .container{
-    padding-top: 120px;
+    padding-top: 100px;
     background-color: #201A1A;
     color: #906A1B;
-    font-size: 42px;
+    padding-left: 0;
+    padding-right: 0;
     margin: auto;
     
 }
 
-.column {
-    float: left;
-    width: 30%;
-}
 
 
 * {box-sizing: border-box;}
@@ -100,6 +94,6 @@ img {vertical-align: middle;}
 }
 
 h3{
-    width: 70%;
+    width: 90%;
     margin: auto;
 }
