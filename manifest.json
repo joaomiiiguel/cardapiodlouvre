@@ -1,8 +1,8 @@
 {
  "name": "Cardápio D'Louvre",
- "short_name": "Card DLouvre",
+ "short_name": "DLouvre",
  "lang": "pt-BR",
- "start_url": ".",
+ "start_url": "/index.html",
  "background_color": "#212121",
  "theme_color": "#212121",
  "display": "standalone",
@@ -51,5 +51,6 @@
    "type": "image\/png",
    "density": "8.0"
    },
- ]
+ ],
+"splash_pages": null
 }

@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" sizes="57x57" href="paginas/assets/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="paginas/assets/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="paginas/assets/apple-icon-72x72.png">
@@ -21,7 +22,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="paginas/assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="paginas/assets/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="paginas/assets/favicon-16x16.png">
-    <link rel="manifest" href="manifest.json">
+    
     <meta name="msapplication-TileColor" content="#212121">
     <meta name="msapplication-TileImage" content="paginas/assets/ms-icon-144x144.png">
     <meta name="theme-color" content="#212121">
@@ -52,22 +53,6 @@
       </div>
   </div>
 </div>
-    
-<script>
-//This is the "Offline copy of pages" service worker
-
-//Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
-if (navigator.serviceWorker.controller) {
-  console.log('[PWA Builder] active service worker found, no need to register')
-} else {
-  //Register the ServiceWorker
-  navigator.serviceWorker.register('sw.js', {
-    scope: '../'
-  }).then(function(reg) {
-    console.log('Service worker has been registered for scope:'+ reg.scope);
-  });
-}    
-</script>
 
 </body>
 </html>
