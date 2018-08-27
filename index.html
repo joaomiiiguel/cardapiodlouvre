@@ -21,18 +21,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="paginas/assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="paginas/assets/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="paginas/assets/favicon-16x16.png">
-    <link rel="manifest" href="paginas/assets/manifest.json">
-    <meta name="msapplication-TileColor" content="#201A1A">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#212121">
     <meta name="msapplication-TileImage" content="paginas/assets/ms-icon-144x144.png">
-    <meta name="theme-color" content="#000000">
-    
-    <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js')
-        .then(reg => console.info('registered sw', reg))
-        .catch(err => console.error('error registering sw', err));
-    }
-    </script>
+    <meta name="theme-color" content="#212121">
     
     <title>Cardápio - D'Louvre</title>
 </head>
@@ -62,10 +54,18 @@
 </div>
     
 <script>
-if ('serviceWorker' in navigator) {
-  console.log('ServiceWorker é suportado, vamos usar!');
+//This is the "Offline copy of pages" service worker
+
+//Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+if (navigator.serviceWorker.controller) {
+  console.log('[PWA Builder] active service worker found, no need to register')
 } else {
-  console.log('ServiceWorker não é suportado.');
+  //Register the ServiceWorker
+  navigator.serviceWorker.register('sw.js', {
+    scope: '../'
+  }).then(function(reg) {
+    console.log('Service worker has been registered for scope:'+ reg.scope);
+  });
 }    
 </script>
 

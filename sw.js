@@ -1,56 +1,43 @@
----
-layout: null
----
+//This is the "Offline copy of pages" service worker
 
-const staticCacheName = 'cardapio-dlouvre-2018-27-08-14-19';
-
-const filesToCache = [
-  { % for page in site.pages_to_cache % }
-    '{ { page } }',
-  { % endfor % }
-  { % for post in site.posts limit: 6 % }
-    '{ { post.url } }',
-  { % endfor % }
-  { % for asset in site.files_to_cache % }
-    '{ { asset } }',
-  { % endfor % }
-];
-
-// Cache on install
-this.addEventListener("install", event => {
-  this.skipWaiting();
-
+//Install stage sets up the index page (home page) in the cache and opens a new cache
+self.addEventListener('install', function (event) {
+  var indexPage = new Request('index.html');
   event.waitUntil(
-    caches.open(staticCacheName)
-      .then(cache => {
-        return cache.addAll(filesToCache);
-    })
-  )
+    fetch(indexPage).then(function(response) {
+      return caches.open('pwabuilder-offline').then(function(cache) {
+        console.log('[PWA Builder] Cached index page during Install'+ response.url);
+        return cache.put(indexPage, response);
+      });
+  }));
 });
 
-// Clear cache on activate
-this.addEventListener('activate', event => {
-  event.waitUntil(
-    caches.keys().then(cacheNames => {
-      return Promise.all(
-        cacheNames
-          .filter(cacheName => (cacheName.startsWith('cardapio-dlouvre-')))
-          .filter(cacheName => (cacheName !== staticCacheName))
-          .map(cacheName => caches.delete(cacheName))
-      );
+//If any fetch fails, it will look for the request in the cache and serve it from there first
+self.addEventListener('fetch', function(event) {
+  var updateCache = function(request){
+    return caches.open('pwabuilder-offline').then(function (cache) {
+      return fetch(request).then(function (response) {
+        console.log('[PWA Builder] add page to offline'+response.url)
+        return cache.put(request, response);
+      });
+    });
+  };
+
+  event.waitUntil(updateCache(event.request));
+
+  event.respondWith(
+    fetch(event.request).catch(function(error) {
+      console.log( '[PWA Builder] Network request Failed. Serving content from cache: ' + error );
+
+      //Check to see if you have it in the cache
+      //Return response
+      //If not in the cache, then return error page
+      return caches.open('pwabuilder-offline').then(function (cache) {
+        return cache.match(event.request).then(function (matching) {
+          var report =  !matching || matching.status == 404?Promise.reject('no-match'): matching;
+          return report
+        });
+      });
     })
   );
-});
-
-// Serve from Cache
-this.addEventListener("fetch", event => {
-  event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        return response || fetch(event.request);
-      })
-      .catch(() => {
-        return caches.match('/offline/index.html');
-      })
-  )
-});
+})
