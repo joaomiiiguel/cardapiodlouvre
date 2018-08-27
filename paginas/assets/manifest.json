@@ -2,7 +2,7 @@
  "name": "Cardápio D'Louvre",
  "short_name": "Card DLouvre",
  "lang": "pt-BR",
- "start_url": "/?utm_source=homescreen",
+ "start_url": "../?homescreen=1",
  "background_color": "#212121",
  "theme_color": "#000000",
  "display": "standalone",
