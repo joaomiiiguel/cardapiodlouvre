@@ -1,5 +1,5 @@
 {
- "name": "Cardápio D'Louvre",
+ "name": "Cardapio DLouvre",
  "short_name": "DLouvre",
  "lang": "pt-BR",
  "start_url": "/index.html",
@@ -50,7 +50,5 @@
    "sizes": "512x512",
    "type": "image\/png",
    "density": "8.0"
-   },
- ],
-"splash_pages": null
+   } ]
 }
