@@ -9,8 +9,9 @@ body, html {
     
 }
 .logo{
-    width: 8em;
+    width: 10%;
     margin: auto;
+    position: relative;
 }
 .container{
     height: 100%;
@@ -23,15 +24,14 @@ body, html {
 /* Slideshow container */
 .slideshow-container {
     padding-top: 20px;
-  max-width: 500px;
-  position: relative;
-  margin: auto;
+    position: relative;
+    margin: auto;
+    width: 25%;
 }
 
 /* Hide the images by default */
 .mySlides {
     display: none;
-    height: 400px;
 }
 
 /* Next & previous buttons */
@@ -51,12 +51,12 @@ body, html {
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
+  right: -50;
   border-radius: 3px 0 0 3px;
 }
 
 .prev {
-    left: 0;
+    left: -50;
 }
 
 
