@@ -1,0 +1,158 @@
+<! DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Cardápio - D'Louvre</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/listaprato.css">
+    
+    
+</head>
+<body>
+    
+    <header>
+        <div class="row">
+            <div class="row_cell">
+                <a href="menu.html">
+                        <span id="btHome" class="glyphicon glyphicon-home"></span>
+                </a>
+            </div>
+            <div class="row_cell">
+                <h1 class="categoriaprato">GUARNIÇÕES</h1>
+            </div>
+            <div id="myBtnContainer">
+                <button class="btn" onclick="filterSelection('bronze')">Bronze</button>
+                <button class="btn" onclick="filterSelection('prata')">Prata</button>
+                <button class="btn active" onclick="filterSelection('all')">Ouro</button>
+                
+            </div>
+        </div>    
+    </header>
+
+    <div class="container">
+        
+                    <div class="polaroid filterDiv">
+                        <a href="pratos/prato-arrozbranco.html"><img src="img/foto-arrozbranco.jpg" alt="Prato 1"></a>
+                        <div class="container">
+                        <p>ARROZ BRANCO</p>
+                        </div>
+                    </div>
+            
+                    <div class="polaroid filterDiv prata">
+                        <a href="pratos/prato-arrozgrega.html"><img src="img/foto-arrozgrega.jpg" alt="Prato 1"></a>
+                        <div class="container">
+                        <p>ARROZ À GREGA</p>
+                        </div>
+                    </div>
+            
+                    <div class="polaroid filterDiv prata">
+                        <a href="pratos/prato-arrozpassas.html"><img src="img/foto-arrozpassas.jpg" alt="Prato 1" ></a>
+                        <div class="container">
+                        <p>ARROZ COM PASSAS</p>
+                        </div>
+                    </div>
+                
+            
+                    <div class="polaroid filterDiv bronze">
+                        <a href="pratos/prato-arrozamendoas.html"><img src="img/foto-arrozamendoas.jpg" alt="Prato 1" ></a>
+                        <div class="container">
+                        <p>ARROZ COM AMÊNDOAS</p>
+                        </div>
+                    </div>
+                    <div class="polaroid filterDiv prata">
+                        <a href="pratos/prato-arrozbrocolis.html"><img src="img/foto-arrozbrocolis.jpg" alt="Prato 1" ></a>
+                        <div class="container">
+                        <p>ARROZ COM BRÓCOLIS</p>
+                        </div>
+                    </div>
+                
+                    <div class="polaroid filterDiv bronze">
+                        <a href="pratos/prato-arrozruculatomate.html"><img src="img/foto-arrozrucula.jpg" alt="Prato 1" ></a>
+                        <div class="container">
+                        <p>ARROZ COM RÚCULA E TOMATE SECO</p>
+                        </div>
+                    </div>
+                
+                    <div class="polaroid filterDiv prata">
+                        <a href="pratos/prato-batatasgratinadas.html"><img src="img/foto-batatasgratinadas.jpg" alt="Prato 1"></a>
+                        <div class="container">
+                        <p>BATATAS GRATINADAS</p>
+                        </div>
+                    </div>
+                
+                    <div class="polaroid filterDiv prata">
+                        <a href="pratos/prato-batatasnoisette.html"><img src="img/foto-batatasnoisette.jpg" alt="Prato 1"></a>
+                        <div class="container">
+                        <p>BATATAS NOISETTE</p>
+                        </div>
+                    </div>
+                
+                    <div class="polaroid filterDiv prata">
+                        <a href="pratos/prato-batatasduquesa.html"><img src="img/foto-batataduquesa.jpg" alt="Prato 1"></a>
+                        <div class="container">
+                        <p>BATATAS DUQUESA</p>
+                        </div>
+                    </div>
+            
+                    <div class="polaroid filterDiv prata">
+                        <a href="pratos/prato-panachelegumes.html"><img src="img/foto-panache.jpg" alt="Prato 1"></a>
+                        <div class="container">
+                        <p>PANACHÊ DE LEGUMES</p>
+                        </div>
+                    </div>
+        
+                    <div class="polaroid filterDiv prata">
+                        <a href="pratos/prato-cenourasvichy.html"><img src="img/foto-arrozgrega.jpg" alt="Prato 1"></a>
+                        <div class="container">
+                        <p>CENOURAS VICHY COM ALHO-PORÓ</p>
+                        </div>
+                    </div>
+                
+    </div>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+</body>
+</html>

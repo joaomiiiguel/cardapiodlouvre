@@ -1,9 +1,9 @@
 {
- "name": "Cardapio DLouvre",
- "short_name": "DLouvre",
+ "name": "Cardápio D'Louvre",
+ "short_name": "D'Louvre",
  "lang": "pt-BR",
  "start_url": "index.html?launcher=true",
- "background_color": "#212121",
+ "background_color": "#FFFFFF",
  "theme_color": "#212121",
  "display": "standalone",
  "orientation": "landscape",
