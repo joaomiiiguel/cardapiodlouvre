@@ -26,7 +26,7 @@ body, html {
     padding-top: 20px;
     position: relative;
     margin: auto;
-    width: 25%;
+    width: 30%;
 }
 
 /* Hide the images by default */
@@ -36,42 +36,26 @@ body, html {
 
 /* Next & previous buttons */
 .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 30px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    text-decoration: none;
 }
 
 /* Position the "next button" to the right */
 .next {
-  right: -50;
-  border-radius: 3px 0 0 3px;
+    right: -50;
+    border-radius: 3px 0 0 3px;
 }
 
 .prev {
     left: -50;
-}
-
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 5px;
-  width: 5px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
 }
