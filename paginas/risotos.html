@@ -14,87 +14,117 @@
     <header>
         <div class="row">
             <div class="row_cell">
-                <a href="menuouro.html">
+                <a href="menu.html">
                         <span id="btHome" class="glyphicon glyphicon-home"></span>
                 </a>
             </div>
             <div class="row_cell">
                 <h1 class="categoriaprato">RISOTOS</h1>
             </div>
+            <div id="myBtnContainer">
+                <button class="btn" onclick="filterSelection('bronze')">Bronze</button>
+                <button class="btn" onclick="filterSelection('prata')">Prata</button>
+                <button class="btn active" onclick="filterSelection('all')">Ouro</button>
+                
+            </div>
         </div>    
     </header>
 
     <div class="container">
-        <div class="lista">
-            <div class="row">
-                <div class="column">
+        
                     <div class="polaroid">
                         <a href="pratos/prato-risotofunghi.html"><img src="img/foto-risotofunghi.jpg" alt="Prato 1" style="width:100%"></a>
                         <div class="container">
                         <p>RISOTO DE FUNGHI</p>
                         </div>
                     </div>
-                </div>
-                <div class="column">
+                
                     <div class="polaroid">
                         <a href="pratos/prato-risotocamarao.html"><img src="img/foto-risotocamarao.jpg" alt="Prato 1" style="width:100%"></a>
                         <div class="container">
                         <p>RISOTO DE CAMARÃO</p>
                         </div>
                     </div>
-                </div>
-                <div class="column">
+                
                     <div class="polaroid">
                         <a href="pratos/prato-risotofrango.html"><img src="img/foto-risotofrango.jpg" alt="Prato 1" style="width:100%"></a>
                         <div class="container">
                         <p>RISOTO DE FRANGO</p>
                         </div>
                     </div>
-                </div>
-            </div>
-            
-<!-------------------------------------------------------------------------------------->
-            <div class="row">
-                <div class="column">
+               
                     <div class="polaroid">
                         <a href="pratos/prato-risotofrutosmar.html"><img src="img/foto-risotofrutos.jpg" alt="Prato 1" style="width:100%"></a>
                         <div class="container">
                         <p>RISOTO DE FRUTOS DO MAR</p>
                         </div>
                     </div>
-                </div>
-                <div class="column">
+                
                     <div class="polaroid">
                         <a href="pratos/prato-risotolimaosiciliano.html"><img src="img/foto-risotolimao.jpg" alt="Prato 1" style="width:100%"></a>
                         <div class="container">
                         <p>RISOTO DE LIMÃO SICILIANO</p>
                         </div>
                     </div>
-                </div>
-                <div class="column">
+                
                     <div class="polaroid">
                         <a href="pratos/prato-risotofiletcogumelos.html"><img src="img/foto-risotofiletcogumelos.jpg" alt="Prato 1" style="width:100%"></a>
                         <div class="container">
                         <p>RISOTO DE FILET COM COGUMELOS SHITACK</p>
                         </div>
                     </div>
-                </div>
-            </div>
-            
-<!-------------------------------------------------------------------------------------->
-            <div class="row">
-                <div class="column">
+                
                     <div class="polaroid">
                         <a href="pratos/prato-risotocogumelosdamasco.html"><img src="img/foto-risotocogumelodamasco.jpg" alt="Prato 1" style="width:100%"></a>
                         <div class="container">
                         <p>RISOTO DE COGUMELOS FUNGUI E DAMASCO</p>
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            
-        </div>
+               
     </div>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
 </body>
 </html>
