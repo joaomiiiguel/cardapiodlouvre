@@ -32,7 +32,6 @@ header{
     float: left;
 }
 .categoriaprato{
-    font-size: 40px;
     text-align: center;
     padding: 0em;
     float: left;
@@ -106,4 +105,15 @@ p{
 .btn.active {
   background-color: white;
   color: #906A1B;
+}
+
+@media (max-width: 680px){
+    
+    .container{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .container .polaroid {
+        width: 45%;
+    }
 }

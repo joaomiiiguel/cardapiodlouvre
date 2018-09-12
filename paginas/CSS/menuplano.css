@@ -14,12 +14,11 @@ body, html {
 }
 
 .row{
-    padding-left: 100px;
-    padding-right: 0;
     margin: 0;
 }
     
-    /* Set gray background color and 100% height */
+@media (min-width: 700px) {
+  
 .sidenav {
     background-color: #201A1A;
     color: #966A1B;
@@ -29,12 +28,42 @@ body, html {
     padding-top: 1em;
     padding-bottom: 2em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    max-width: 30em;
     text-align: center;
     margin: auto;
-    width: 40%;
-    top: 20px;
+    width: 30%;
+    top: 20%;
+    left: 10%;
+    position: absolute;
     
+    }
+}
+@media (max-width:700px){
+    .row{
+        margin: auto;
+    }
+    .sidenav {
+    background-color: #201A1A;
+    color: #966A1B;
+    height: 510px;
+    border: 3px solid #966A1B;
+    border-radius: 8px;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin: 0 auto;
+    width: 60%;
+    top: 20%;
+    left: 20%;
+    position: absolute;
+    
+    }
+    
+    .FundoHome{
+    height: 100%;
+    float: right;
+    width: 100%;
+}
 }
 
 
@@ -52,10 +81,8 @@ ul a {
     display: inline-block;
 }
 
-.maincontent{
-    float: right;
-    
-}
+
 .FundoHome{
     height: 100%;
+    float: right;
 }
