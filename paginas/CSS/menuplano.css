@@ -31,7 +31,7 @@ body, html {
     text-align: center;
     margin: auto;
     width: 30%;
-    top: 20%;
+    top: 15%;
     left: 10%;
     position: absolute;
     
@@ -75,7 +75,7 @@ body, html {
 ul a {
     background-color: #2D2525;
     color: white;
-    margin-bottom: 5px;
+    margin-bottom: 0.2em;
     text-align: center; 
     text-decoration: none;
     display: inline-block;
