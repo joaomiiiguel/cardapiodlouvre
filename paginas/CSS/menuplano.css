@@ -16,6 +16,25 @@ body, html {
 .row{
     margin: 0;
 }
+#cardp {
+    width: 60px;
+    height: 50px;
+}
+
+ul a {
+    background-color: #2D2525;
+    color: white;
+    margin-bottom: 0.2em;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.FundoHome{
+    height: 100%;
+    float: right;
+}
     
 @media (min-width: 700px) {
   
@@ -31,7 +50,7 @@ body, html {
     text-align: center;
     margin: auto;
     width: 30%;
-    top: 15%;
+    top: 10%;
     left: 10%;
     position: absolute;
     
@@ -53,7 +72,7 @@ body, html {
     text-align: center;
     margin: 0 auto;
     width: 60%;
-    top: 20%;
+    top: 10%;
     left: 20%;
     position: absolute;
     
@@ -66,23 +85,3 @@ body, html {
 }
 }
 
-
-#cardp {
-    width: 60px;
-    height: 50px;
-}
-
-ul a {
-    background-color: #2D2525;
-    color: white;
-    margin-bottom: 0.2em;
-    text-align: center; 
-    text-decoration: none;
-    display: inline-block;
-}
-
-
-.FundoHome{
-    height: 100%;
-    float: right;
-}
